@@ -67,17 +67,24 @@ public class Morpion2 {
         //boolean placementok = false;
         boolean sortieboucle = true;
         do {
-            int x = ConsoleUtil.lireint("joueur" + joueur + "entrez ligne");
-            int y = ConsoleUtil.lireint("joueur" + joueur + "entrez colonne");
-            if (x < 0 || x > 2 || y < 0 || y > 2) {
+             ligne = ConsoleUtil.lireint("joueur" + joueur + "entrez ligne");
+            colonne = ConsoleUtil.lireint("joueur" + joueur + "entrez colonne");
+            if (ligne < 0 || ligne > 2 || colonne < 0 || colonne > 2) {
                 System.out.println("coord hors plateau");
                 sortieboucle = false; //continue;
             }
-            if (cadre[x][y] != 'v') {
+            if (cadre[ligne][colonne] != 'v') {
                 System.out.println("case occupee");
                 sortieboucle = false; //continue;
             }
         } while (sortieboucle != false);
+        if (joueur == 0) {
+            cadre[ligne][colonne] = 'x';
+            joueur = 1;
+        } else {
+            cadre[ligne][colonne] = 'o';
+            joueur = 0;
+        }
     }
 
     public void verifgagne() throws IOException {

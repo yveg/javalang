@@ -6,6 +6,7 @@
 package test01;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 
 /**
@@ -40,5 +41,11 @@ public class SetTest {
       // pak.addAll(nombre);
          System.out.println("apres set pak: " +pak);
          System.out.println("apres liste nombre: " +nombre);
+         
+         HashMap<String, String> map = new HashMap<>();
+        map.put("java", "langage de programmation objet");
+        map.put("c", "langage de programmation structuré");
+        map.put("ruby", "langage de script objet");
+         System.out.println(map.get("ruby"));
     }
 }
