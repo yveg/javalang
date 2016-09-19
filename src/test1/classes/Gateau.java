@@ -29,8 +29,10 @@ public class Gateau {
     private static String forme;
     private  String gout;
      private  String couleur;
+     static private int compteur=0;
 
     public Gateau() {
+        compteur++;
         this.couleur ="noir";
         this.gout ="chocolat";
     }
@@ -47,7 +49,7 @@ public class Gateau {
     
   @Override 
      public String toString() {
-        return "forme: "+forme+" au gout de:" +gout+" de couleur: "+couleur; //To change body of generated methods, choose Tools | Templates.
+        return "forme: "+forme+" au gout de:" +gout+" de couleur: "+couleur+ "\n nombre de gateau:"+compteur; //To change body of generated methods, choose Tools | Templates.
     }
     
 }
